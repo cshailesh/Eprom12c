@@ -44,3 +44,5 @@ void CEProm_WriteByte(CEProm *pClass, uint8_t pAddress, uint8_t *pByte)
 	CI2CEmu_Stop(&pClass->mI2c);
 	*pByte = res;
 }
+
+

@@ -84,7 +84,7 @@ void CI2CEmu_WriteByte(CI2CEmu *pI2CEmu, uint8_t pByte)
 {
 	for (char i = 0; i < 8; i++)
 	{
-		CI2CEmu_WriteBit(pI2CEmu, pByte & 128);
+		CI2CEmu_WriteBit(pI2CEmu, pByte);
 		pByte <<= 1;
 	}
 }

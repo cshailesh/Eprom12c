@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "CEEProm.h"
+#include "CI2CEmuTest.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -85,6 +86,9 @@ int main(void)
   /* Initialize all configured peripherals */
     MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
+
+    Test_I2c_Ex1();
+
     CEProm eprom;
     CEProm_Init(&eprom, EMEM_SCL_GPIO_Port, EMEM_SCL_Pin, EMEM_SDA_GPIO_Port, EMEM_SDA_Pin,7);
     uint8_t dataBuff;

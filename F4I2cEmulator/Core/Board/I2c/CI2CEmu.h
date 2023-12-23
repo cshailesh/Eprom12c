@@ -61,5 +61,4 @@ void CI2CEmu_Stop(CI2CEmu *pI2CEmu);
 void CI2CEmu_WriteByte(CI2CEmu *pI2CEmu, uint8_t pByte);
 void CI2CEmu_ReadByte(CI2CEmu *pI2CEmu, uint8_t *pByte,uint8_t ack);
 
-void CI2CEmu_WriteByte(CI2CEmu *pI2CEmu, uint8_t pByte);
 #endif
