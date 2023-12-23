@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "CEEProm.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -83,16 +83,21 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-  MX_GPIO_Init();
+    MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-
+    CEProm eprom;
+    CEProm_Init(&eprom, EMEM_SCL_GPIO_Port, EMEM_SCL_Pin, EMEM_SDA_GPIO_Port, EMEM_SDA_Pin,7);
+    uint8_t dataBuff;
   /* USER CODE END 2 */
-
   /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
+  /* USER CODE BEGIN WHILE */  
   while (1)
   {
     /* USER CODE END WHILE */
+    CEProm_ReadByte(&eprom,0,&dataBuff);
+    HAL_Delay(1000);
+
+    HAL_Delay(1000);
 
     /* USER CODE BEGIN 3 */
   }

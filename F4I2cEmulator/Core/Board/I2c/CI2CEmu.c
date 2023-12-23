@@ -87,7 +87,6 @@ void CI2CEmu_WriteByte(CI2CEmu *pI2CEmu, uint8_t pByte)
 		CI2CEmu_WriteBit(pI2CEmu, pByte & 128);
 		pByte <<= 1;
 	}
-
 }
 
 void CI2CEmu_ReadByte(CI2CEmu *pI2CEmu, uint8_t *pByte, uint8_t ack)
